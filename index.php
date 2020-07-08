@@ -1,6 +1,7 @@
 <?php
 $param = var_export($_SERVER, true);
-$stdout= fopen( 'php://stdout', 'w' );
+// $stdout= fopen( 'php://stdout', 'w' ); //標準出力
+$stdout= fopen( 'logs/request.log', 'a' );  //ファイル書き出し
 fwrite( $stdout, $param );
 //POST
 if(strtoupper($_SERVER['REQUEST_METHOD'])=="POST") {
