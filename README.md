@@ -15,5 +15,6 @@ ngrok http 8080
 ファイルに書き出す場合
 
 ```bash
+touch logs/request.log
 chmod 666 logs/request.log
 ```
